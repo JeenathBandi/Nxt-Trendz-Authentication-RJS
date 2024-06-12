@@ -19,6 +19,10 @@ class LoginForm extends Component {
     history.replace('/')
   }
 
+  onFailureLogin = errorMsg => {
+    this.setState({showErrMsg: true, errorMsg})
+  }
+
   onSubmitForm = async event => {
     event.preventDefault()
     const {username, password, errorMsg} = this.state
@@ -33,7 +37,7 @@ class LoginForm extends Component {
     if (response.ok === true) {
       this.onSuccessLogin()
     } else {
-      this.setState({errorMsg: "*Username and Password didn't match"})
+      this.onFailureLogin(data.error_msg)
     }
   }
 
@@ -76,7 +80,7 @@ class LoginForm extends Component {
   }
 
   render() {
-    const {errorMsg} = this.state
+    const {errorMsg, showErrMsg} = this.state
     return (
       <div className="login-form-container">
         <div className="row-container">
@@ -101,7 +105,7 @@ class LoginForm extends Component {
               <button type="submit" className="login-btn">
                 Login
               </button>
-              <p className="error-msg">{errorMsg}</p>
+              {showErrMsg && <p className="error-msg">*{errorMsg}</p>}
             </form>
           </div>
         </div>
