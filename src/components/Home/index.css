@@ -1,0 +1,37 @@
+/* Write your CSS code here */
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  padding: 30px;
+}
+.home-first-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 45%;
+}
+.heading {
+  font-family: 'Roboto';
+  color: #1e293b;
+  text-align: left;
+}
+.description {
+  color: #64748b;
+  font-family: 'Roboto';
+  line-height: 28px;
+}
+.shop-now-button {
+  background-color: #0967d2;
+  color: #ffffff;
+  font-family: 'Roboto';
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 10vw;
+}
+.home-img {
+  width: 50vw;
+  max-width: 450px;
+  margin-left: 85px;
+}

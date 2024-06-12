@@ -1,0 +1,35 @@
+/* Write your CSS code here */
+.header-container {
+  display: flex;
+  height: 20vh;
+  justify-content: space-between;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+.first-container {
+  display: flex;
+}
+.website-logo {
+  height: 8vh;
+  width: 12vw;
+  padding-top: 10px;
+}
+.second-container {
+  display: flex;
+  list-style: none;
+}
+.li-items {
+  color: #1e293b;
+  font-family: 'Roboto';
+  margin: 10px;
+}
+.logout-btn {
+  color: #ffffff;
+  font-family: 'Roboto';
+  border: none;
+  background-color: #0b69ff;
+  border-radius: 5px;
+  height: 5vh;
+  text-align: center;
+  margin-top: 20px;
+}
